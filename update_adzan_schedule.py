@@ -3,8 +3,19 @@ import json
 from datetime import datetime, date
 from typing import Dict
 
-import requests
-from crontab import CronTab
+try:
+    import requests
+except ModuleNotFoundError:  # pragma: no cover - simple dependency check
+    raise SystemExit(
+        "Module 'requests' not installed. Install with 'pip install requests'."
+    )
+
+try:
+    from crontab import CronTab
+except ModuleNotFoundError:  # pragma: no cover - simple dependency check
+    raise SystemExit(
+        "Module 'python-crontab' not installed. Install with 'pip install python-crontab'."
+    )
 
 # Configuration
 CITY = "Bandung"

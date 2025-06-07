@@ -9,6 +9,12 @@ Script `update_adzan_schedule.py` digunakan untuk mengambil jadwal sholat harian
 - Pemutar MP3 `mpg123`
 - File `adzan_subuh.mp3` dan `adzan_umum.mp3` berada di direktori yang sama dengan script
 
+Install dependensi Python menggunakan pip:
+
+```bash
+pip install requests python-crontab
+```
+
 ## Menjalankan
 
 Jalankan script setiap hari (misalnya melalui cron atau systemd):
